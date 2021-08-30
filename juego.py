@@ -20,7 +20,17 @@ if opcion_usuario == "piedra" or opcion_usuario == "papel" or opcion_usuario == 
     
     # Revisa si la opción del usuario es la misma que la opción del computador
     if opcion_usuario == opcion_computador:
-        print("Empate!")
+        print("Empataste!")
+        # Revisa si el usuario tiene posibilidades de ganar
+    elif opcion_usuario == "piedra" and opcion_computador == "tijera":
+            print("Ganaste!")
+    elif opcion_usuario == "tijera" and opcion_computador == "papel":
+            print("Ganaste!")
+    elif opcion_usuario == "papel" and opcion_computador == "piedra":
+            print("Ganaste!")
+    else:
+        # En cualquier otra opción el usuario pierde
+        print("Perdiste!")
 else:
     # Mensaje al usuario
     print("Argumento inválido: debe ser piedra, papel o tijera.")
